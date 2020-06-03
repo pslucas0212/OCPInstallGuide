@@ -1,0 +1,33 @@
+# Bootstrap0
+ip=10.1.1.241::10.1.1.1:255.255.255.0:bootstrap0.ocp43.example.com:ens192:none nameserver=10.1.1.254 coreos.inst.install_dev=sda coreos.inst.image_url=http://10.1.1.239:8080/image/rhcos-4.4.3-x86_64-metal.x86_64.raw.gz coreos.inst.ignition_url=http://10.1.1.239:8080/ignition/append-bootstrap.ign
+sudo mkisofs -U -A "RHCOS-x86_64" -V "RHCOS-x86_64" -volset "RHCOS-x86_64" -J -joliet-long -r -v -T -x ./lost+found -o /tmp/rhcos_bootsrap0.iso -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -eltorito-alt-boot -e images/efiboot.img -no-emul-boot .
+
+
+# Master01
+ip=10.1.1.242::10.1.1.1:255.255.255.0:master01.ocp43.example.com:ens192:none nameserver=10.1.1.254 coreos.inst.install_dev=sda coreos.inst.image_url=http://10.1.1.239:8080/image/rhcos-4.4.3-x86_64-metal.x86_64.raw.gz coreos.inst.ignition_url=http://10.1.1.239:8080/ignition/master.ign
+sudo mkisofs -U -A "RHCOS-x86_64" -V "RHCOS-x86_64" -volset "RHCOS-x86_64" -J -joliet-long -r -v -T -x ./lost+found -o /tmp/rhcos_master01.iso -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -eltorito-alt-boot -e images/efiboot.img -no-emul-boot .
+
+
+# Master02
+ip=10.1.1.243::10.1.1.1:255.255.255.0:master02.ocp43.example.com:ens192:none nameserver=10.1.1.254 coreos.inst.install_dev=sda coreos.inst.image_url=http://10.1.1.239:8080/image/rhcos-4.4.3-x86_64-metal.x86_64.raw.gz coreos.inst.ignition_url=http://10.1.1.239:8080/ignition/master.ign
+sudo mkisofs -U -A "RHCOS-x86_64" -V "RHCOS-x86_64" -volset "RHCOS-x86_64" -J -joliet-long -r -v -T -x ./lost+found -o /tmp/rhcos_master02.iso -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -eltorito-alt-boot -e images/efiboot.img -no-emul-boot .
+
+
+#Master03
+ip=10.1.1.244::10.1.1.1:255.255.255.0:master03.ocp43.example.com:ens192:none nameserver=10.1.1.254 coreos.inst.install_dev=sda coreos.inst.image_url=http://10.1.1.239:8080/image/rhcos-4.4.3-x86_64-metal.x86_64.raw.gz coreos.inst.ignition_url=http://10.1.1.239:8080/ignition/master.ign
+sudo mkisofs -U -A "RHCOS-x86_64" -V "RHCOS-x86_64" -volset "RHCOS-x86_64" -J -joliet-long -r -v -T -x ./lost+found -o /tmp/rhcos_master03.iso -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -eltorito-alt-boot -e images/efiboot.img -no-emul-boot .
+
+
+#Worker01
+ip=10.1.1.245::10.1.1.1:255.255.255.0:worker01.ocp43.example.com:ens192:none nameserver=10.1.1.254 coreos.inst.install_dev=sda coreos.inst.image_url=http://10.1.1.239:8080/image/rhcos-4.4.3-x86_64-metal.x86_64.raw.gz coreos.inst.ignition_url=http://10.1.1.239:8080/ignition/worker.ign
+sudo mkisofs -U -A "RHCOS-x86_64" -V "RHCOS-x86_64" -volset "RHCOS-x86_64" -J -joliet-long -r -v -T -x ./lost+found -o /tmp/rhcos_worker01.iso -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -eltorito-alt-boot -e images/efiboot.img -no-emul-boot .
+
+
+# Worker02
+ip=10.1.1.246::10.1.1.1:255.255.255.0:worker02.ocp43.example.com:ens192:none nameserver=10.1.1.254 coreos.inst.install_dev=sda coreos.inst.image_url=http://10.1.1.239:8080/image/rhcos-4.4.3-x86_64-metal.x86_64.raw.gz coreos.inst.ignition_url=http://10.1.1.239:8080/ignition/worker.ign
+sudo mkisofs -U -A "RHCOS-x86_64" -V "RHCOS-x86_64" -volset "RHCOS-x86_64" -J -joliet-long -r -v -T -x ./lost+found -o /tmp/rhcos_worker02.iso -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -eltorito-alt-boot -e images/efiboot.img -no-emul-boot .
+
+
+# Worker03
+ip=10.1.1.247::10.1.1.1:255.255.255.0:worker03.ocp43.example.com:ens192:none nameserver=10.1.1.254 coreos.inst.install_dev=sda coreos.inst.image_url=http://10.1.1.239:8080/image/rhcos-4.4.3-x86_64-metal.x86_64.raw.gz coreos.inst.ignition_url=http://10.1.1.239:8080/ignition/worker.ign
+sudo mkisofs -U -A "RHCOS-x86_64" -V "RHCOS-x86_64" -volset "RHCOS-x86_64" -J -joliet-long -r -v -T -x ./lost+found -o /tmp/rhcos_worker03.iso -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -eltorito-alt-boot -e images/efiboot.img -no-emul-boot .
