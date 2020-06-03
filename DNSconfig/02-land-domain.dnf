@@ -1,0 +1,5 @@
+# Configuration for the 02-land-domain.dnf 
+# The 02-land-domain.dnf is the file used to setup reverse dns lookup information.  The file is found in the /etc/dnsmasq.d directory
+
+server=/ns01.example.com/10.1.1.254
+server=/1.1.10.in-addr.arpa/10.1.1.254
