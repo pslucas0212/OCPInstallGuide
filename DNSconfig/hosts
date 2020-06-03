@@ -1,0 +1,40 @@
+# Configuration for /etc/hosts
+# dnsmq on pihole uses the /etc/hosts file for static ip/dns
+
+
+127.0.0.1	localhost
+::1		localhost ip6-localhost ip6-loopback
+ff02::1		ip6-allnodes
+ff02::2		ip6-allrouters
+
+10.1.1.254 ns01.example.com ns01
+10.1.1.196 exsi03.example.com exsi03
+10.1.1.197 bootstrap.ocp4.example.com
+10.1.1.198 bastion02.example.com bastion02
+10.1.1.198 api.ocp4.example.com
+10.1.1.198 api-int.ocp4.example.com
+10.1.1.200 master01.ocp4.example.com
+10.1.1.201 master02.ocp4.example.com
+10.1.1.202 master03.ocp4.example.com
+10.1.1.203 worker01.ocp4.example.com
+10.1.1.204 worker02.ocp4.example.com
+10.1.1.205 worker03.ocp4.example.com
+10.1.1.200 etcd-01.ocp4.example.com
+10.1.1.201 etcd-02.ocp4.example.com
+10.1.1.202 etcd-03.ocp4.example.com
+10.1.1.225 exsi02.example.com exsi02
+10.1.1.234 vsca01.example.com vca01
+10.1.1.235 exsi01.example.com exsi01
+10.1.1.239 bastion.example.com bastion
+10.1.1.239 api.ocp43.example.com
+10.1.1.239 api-int.ocp43.example.com
+10.1.1.241 bootstrap0.ocp43.example.com
+10.1.1.242 master01.ocp43.example.com
+10.1.1.243 master02.ocp43.example.com
+10.1.1.244 master03.ocp43.example.com
+10.1.1.245 worker01.ocp43.example.com
+10.1.1.246 worker02.ocp43.example.com
+10.1.1.242 etcd-01.ocp43.example.com
+10.1.1.243 etcd-02.ocp43.example.com
+10.1.1.244 etcd-03.ocp43.example.com
+10.1.1.253 mypi01.example.com mypi01
