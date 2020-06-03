@@ -1,5 +1,5 @@
 # haproxy.conf is stored under etc/haproxy
-# this haproxy.conf is for the ocp43.example.com OCP cluster
+# this haproxy.conf is for the ocp4.example.com OCP cluster
 
 #---------------------------------------------------------------------
 # Example configuration for a possible web application.  See the
@@ -80,10 +80,10 @@ frontend openshift-api-server
 backend openshift-api-server
     balance source
     mode tcp
-    server bootstrap0.ocp43.example.com 10.1.1.241:6443 check
-    server master01.ocp43.example.com 10.1.1.242:6443 check
-    server master02.ocp43.example.com 10.1.1.243:6443 check
-    server master03.ocp43.example.com 10.1.1.244:6443 check
+    server bootstrap.ocp4.example.com 10.1.1.197:6443 check
+    server master01.ocp4.example.com 10.1.1.200:6443 check
+    server master02.ocp4.example.com 10.1.1.201:6443 check
+    server master03.ocp4.example.com 10.1.1.202:6443 check
 
 frontend machine-config-server
     bind *:22623
@@ -94,10 +94,10 @@ frontend machine-config-server
 backend machine-config-server
     balance source
     mode tcp
-    server bootstrap0.ocp43.example.com 10.1.1.241:22623 check
-    server master01.ocp43.example.com 10.1.1.242:22623 check
-    server master02.ocp43.example.com 10.1.1.243:22623 check
-    server master03.ocp43.example.com 10.1.1.244:22623 check
+    server bootstrap.ocp4.example.com 10.1.1.197:22623 check
+    server master01.ocp4.example.com 10.1.1.200:22623 check
+    server master02.ocp4.example.com 10.1.1.201:22623 check
+    server master03.ocp4.example.com 10.1.1.202:22623 check
 
 frontend ingress-http
     bind *:80
@@ -108,11 +108,10 @@ frontend ingress-http
 backend ingress-http
     balance source
     mode tcp
-    server worker01.ocp43.example.com 10.1.1.245:80 check
-    server worker02.ocp43.example.com 10.1.1.246:80 check
-    server worker03.ocp43.example.com 10.1.1.247:80 check
-    server worker04.ocp43.example.com 10.1.1.248:80 check
-
+    server worker01.ocp4.example.com 10.1.1.203:80 check
+    server worker02.ocp4.example.com 10.1.1.204:80 check
+    server worker03.ocp4.example.com 10.1.1.205:80 check
+    
 frontend ingress-https
     bind *:443
     default_backend ingress-https
@@ -122,7 +121,6 @@ frontend ingress-https
 backend ingress-https
     balance source
     mode tcp
-    server worker01.ocp43.example.com 10.1.1.245:443 check
-    server worker02.ocp43.example.com 10.1.1.246:443 check
-    server worker03.ocp43.example.com 10.1.1.247:443 check
-    server worker04.ocp43.example.com 10.1.1.248:443 check
+    server worker01.ocp4.example.com 10.1.1.203:443 check
+    server worker02.ocp4.example.com 10.1.1.204:443 check
+    server worker03.ocp4.example.com 10.1.1.205:443 check
