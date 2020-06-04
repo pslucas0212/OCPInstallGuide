@@ -20,7 +20,13 @@ HAProxy configuration on bastion server
 
 ## OCP Prep Steps
 
-1. Download xxx files
+1. Download OCP files
+    - Download OCP 4.4.x client files -> https://mirror.openshift.com/pub/openshift-v4/clients/ocp/
+      - openshift-install-mac-4.4.3.tar.gz
+      - openshift-install-linux-4.4.3.tar.gz
+    - Download OCP 4.4.x files -> https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/
+      - rhcos-4.4.3-x86_64-installer.x86_64.iso
+      - rhcos-4.4.3-x86_64-metal.x86_64.raw.gz
 2. 
 
   
