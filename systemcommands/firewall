@@ -1,0 +1,30 @@
+Check firewall status
+- systemctl status firewalld
+
+List firewall config
+- firewall-cmd --list-all
+
+Start firewall
+- service firewalld start
+- systemctl start firewalld
+
+Stop firewall
+- service firewalld stop
+- systemctl stop firewalld
+
+Enable firewall
+- systemctl enable firewalld
+
+Disable firewall
+- systemctl disable firewalld
+
+Add firewall ports (public is default zone)
+- firewall-cmd --zone=public --permanent --add-service=http
+- firewall-cmd --zone=public --permanent --add-port 8080/tcp
+
+Reload firewall
+- firewall-cmd --reload
+
+Remove firewall ports (public is default zone)
+- firewall-cmd --zone=public --permanent --remove-service http
+- firewall-cmd --zone=public --permanent --remove-port 8080
