@@ -1,0 +1,7 @@
+1. Update Pi
+- 
+2. Install Chrony and supporting files
+-
+Config chrony.conf
+- ... ->
+Startup sequence Chrony with USB GPS - Note: If using multipel USB devices, connect USB GPS first 
