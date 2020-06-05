@@ -51,7 +51,7 @@ Firewall
       - rsync -a /mnt/* /tmp/rhcos/ 
       - cd /tmp/rhcos 
       - create each OCP member ISO (bootstrap, master01, master02, master03, worker01, worker02, worker03 by editing the        isolinux.cfgf file
-        - vi isolinux/isolinux.cfg. See this file for the edit and command to create each OCP Member ISO  -> 
+        - vi isolinux/isolinux.cfg. See this file for the edit and command to create each OCP Member ISO  ->              https://github.com/pslucas0212/OCPInstallGuide/blob/master/OCPConfigFiles/ISOConfig.ocp4
       - Upload each file to the VMWare cluster
 2. Generate SSH key
     - ssh-keygen -t rsa -b 4096 -N '' -f ~/.ssh/vsphere-ocp43
@@ -66,9 +66,17 @@ Firewall
     - Click on “Download Pull Secret” to download the secret
 4. Create an installation directory
     - mdkir ~/ocp4
-    - create install-config.yaml and place it in the install directory.  My install-config.yaml is here -> 
-    
-    
+    - create install-config.yaml and place it in the install directory.  My install-config.yaml is here -> https://github.com/pslucas0212/OCPInstallGuide/blob/master/OCPConfigFiles/install-config.yaml.ocp4
+5. Generate Kubernetes manifests for the cluster
+    - ./openshift-install create manifests --dir=./ocp4
+6. edit the  <installation directory>/manifests/cluster-scheduler-02-config.yml file
+    - change the mastersSchedulable to false
+7. Obtain Ignition files:
+    - ./openshift-install create ignition-configs --dir=./ocp4
+8. Move the ignition files to the http server
+    - /var/www/html/ignition
+    - append-bootstrap.ign (that created it), bootstrap.ign, master.ign, worker.ign
+
 
   
   
