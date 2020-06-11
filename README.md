@@ -23,6 +23,7 @@ Optional informaion for setting chronyd with GPS to create a stratum 1 time serv
 
 HAProxy configuration on bastion server
 - configure HAProxy config files - my haproxy.conf files are here -> https://github.com/pslucas0212/OCPInstallGuide/tree/master/haproxyconfig
+- note: when setting up HAProxy if there is a binding issue to 0.0.0.0:xxxx, you may need to set the Secure Linux with this command: setsebool -P haproxy_connect_any=1
 
 HTTP
 - set httpd.conf to have httpd listen on 8080 -> Listen 8080
